@@ -8,7 +8,7 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Add three items with different priorities.
     // Expected Result: The item with the highest priority should be returned first.
-    // Defect(s) Found:
+    // Defect(s) Found: The priority queue did not return the item with the highest priority first. Items were removed in the wrong priority order.
     public void TestPriorityQueue_1()
     {
         var priorityQueue = new PriorityQueue();
@@ -25,7 +25,7 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Add three items where two have the same highest priority.
     // Expected Result: The first item with the highest priority should be returned.
-    // Defect(s) Found:
+    // Defect(s) Found: The priority queue did not preserve the insertion order for items with the same priority.
     public void TestPriorityQueue_2()
     {
         var priorityQueue = new PriorityQueue();
